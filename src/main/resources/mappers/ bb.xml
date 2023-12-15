@@ -1,0 +1,14 @@
+<?xmlversion="1.0"encoding="UTF-8"?>
+<!DOCTYPEconfigurationPUBLIC"-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- Properties 파일설정 -->
+    <propertiesresource="db.properties"/>
+    <!-- Alias 설정 -->
+    <typeAliases>
+        <typeAliasalias="board"type="com.mycom.mapp.BoardVO"/>
+    </typeAliases>
+    <!-- DataSource 설정 -->
+    <environmentsdefault="development">
+    <environmentid="development"><transactionManagertype="JDBC"/><dataSourcetype="POOLED"><propertyname="driver"value="${jdbc.driverClassName}"/><propertyname="url"value="${jdbc.url}"/><propertyname="username"value="${jdbc.username}"/><propertyname="password"value="${jdbc.password}"/></dataSource></environment></environments><!-- SqlMapper설정 --><mappers><mapperresource="mappings/board-mapping.xml"/></mappers>
+        </configuration>
